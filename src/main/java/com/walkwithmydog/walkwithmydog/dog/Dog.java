@@ -27,8 +27,7 @@ public class Dog {
     @OneToOne(mappedBy = "dog")
     private User user;
 
-    public Dog(Long id, String name, Gender gender) {
-        this.id = id;
+    public Dog(String name, Gender gender) {
         this.name = name;
         this.gender = gender;
     }

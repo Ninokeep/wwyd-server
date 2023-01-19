@@ -25,10 +25,10 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
-        User user1 = new User(1L, "sony", "cava", "sony@gmail.com");
-        User user2 = new User(2L, "sam", "caleo", "sam@gmail.com");
-        Dog sony = new Dog(1L, "savo", Gender.MALE);
-        Dog sam = new Dog(2L, "samio", Gender.FEMALE);
+        User user1 = new User("sony", "cava", "sony@gmail.com");
+        User user2 = new User("sam", "caleo", "sam@gmail.com");
+        Dog sony = new Dog("savo", Gender.MALE);
+        Dog sam = new Dog("samio", Gender.FEMALE);
         dogRepository.saveAll(List.of(sony, sam));
 
         user1.setDog(sony);

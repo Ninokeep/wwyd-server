@@ -19,4 +19,11 @@ public class DogService {
         return dogRepository.findAll();
     }
 
+    public Dog createDog(Dog dog) {
+
+        Dog newDog = new Dog(dog.getName(), dog.getGender());
+
+        return newDog;
+    }
+
 }
