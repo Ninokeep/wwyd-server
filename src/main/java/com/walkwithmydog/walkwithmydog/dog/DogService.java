@@ -23,7 +23,7 @@ public class DogService {
 
         Dog newDog = new Dog(dog.getName(), dog.getGender());
 
-        return newDog;
+        return dogRepository.save(newDog);
     }
 
 }

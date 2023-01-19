@@ -10,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "dogs")
@@ -20,8 +21,10 @@ public class Dog {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "dog_sequence")
     private Long id;
 
+    @NotNull(message = "name is required")
     private String name;
 
+    @NotNull(message = "gender is required")
     private Gender gender;
 
     @OneToOne(mappedBy = "dog")
